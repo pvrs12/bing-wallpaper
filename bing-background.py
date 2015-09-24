@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+
 import requests
 import shutil
+import os
 
 base="http://www.bing.com"
 resource="/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=en-US"
@@ -15,3 +18,4 @@ with open('image.jpg','wb') as f:
   for chunk in imageResp:
     f.write(chunk)
 
+os.system("xfdesktop --reload")
